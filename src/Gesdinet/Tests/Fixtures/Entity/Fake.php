@@ -1,0 +1,33 @@
+<?php
+
+namespace Gesdinet\Tests\Fixtures\Entity;
+
+/**
+ * @Entity
+ * @Table(name="some_fake")
+ * @codeCoverageIgnore
+ */
+class Fake
+{
+    /**
+     * @Id
+     * @Column(type="integer")
+     * @GeneratedValue
+     */
+    public $id;
+
+    /**
+     * @Column(type="date", nullable=false)
+     */
+    public $somedate;
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getSomedate()
+    {
+        return $this->somedate;
+    }
+}
